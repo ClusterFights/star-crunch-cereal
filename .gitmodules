@@ -1,0 +1,3 @@
+[submodule "fpga-md5-cracker"]
+	path = fpga-md5-cracker
+	url = https://github.com/John-Leitch/fpga-md5-cracker.git
