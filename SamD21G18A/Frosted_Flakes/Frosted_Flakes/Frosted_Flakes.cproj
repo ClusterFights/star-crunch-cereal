@@ -5,16 +5,16 @@
     <ProjectVersion>7.0</ProjectVersion>
     <ToolchainName>com.Atmel.ARMGCC.C</ToolchainName>
     <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
-    <avrdevice>ATSAMD21G18AU</avrdevice>
+    <avrdevice>ATSAMD21G18A</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
     <Language>C</Language>
     <OutputFileName>$(MSBuildProjectName)</OutputFileName>
     <OutputFileExtension>.elf</OutputFileExtension>
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
-    <AssemblyName>CornFlakes</AssemblyName>
-    <Name>CornFlakes</Name>
-    <RootNamespace>CornFlakes</RootNamespace>
+    <AssemblyName>Frosted_Flakes</AssemblyName>
+    <Name>Frosted_Flakes</Name>
+    <RootNamespace>Frosted_Flakes</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
@@ -30,15 +30,15 @@
     <EraseKey />
     <AsfFrameworkConfig>
       <framework-data xmlns="">
-        <options />
-        <configurations />
-        <files />
-        <documentation help="" />
-        <offline-documentation help="" />
-        <dependencies>
-          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.40.0" />
-        </dependencies>
-      </framework-data>
+  <options />
+  <configurations />
+  <files />
+  <documentation help="" />
+  <offline-documentation help="" />
+  <dependencies>
+    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.40.0" />
+  </dependencies>
+</framework-data>
     </AsfFrameworkConfig>
     <atStartFilePath>.atmelstart\atmel_start_config.atstart</atStartFilePath>
     <GpdscFilePath>.atmelstart\AtmelStart.gpdsc</GpdscFilePath>
@@ -149,11 +149,11 @@
           <AcmeProjectActionInfo Action="File" Source="atmel_start.h" IsConfig="false" Hash="9RBG5E2ViQiSP2Gn4/FGpA" />
           <AcmeProjectActionInfo Action="File" Source="atmel_start.c" IsConfig="false" Hash="1RHIE7zTtYK4DURNPUqF9w" />
           <AcmeProjectActionInfo Action="File" Source="config/hpl_dmac_config.h" IsConfig="true" Hash="epQJaS6fYVwOO2L9+1CkQg" />
-          <AcmeProjectActionInfo Action="File" Source="config/hpl_gclk_config.h" IsConfig="true" Hash="FCJio8dIbyhqbc8G4f/T8A" />
-          <AcmeProjectActionInfo Action="File" Source="config/hpl_pm_config.h" IsConfig="true" Hash="GH0DautnKY3X7yLEFG4tgA" />
+          <AcmeProjectActionInfo Action="File" Source="config/hpl_gclk_config.h" IsConfig="true" Hash="WyCj6IYIhsKryj2eWh1z8g" />
+          <AcmeProjectActionInfo Action="File" Source="config/hpl_pm_config.h" IsConfig="true" Hash="x4vaJkd/zdQh7JrOUaIkRw" />
           <AcmeProjectActionInfo Action="File" Source="config/hpl_sercom_config.h" IsConfig="true" Hash="GWtpvwLJhiBCIh7sLIbOuA" />
-          <AcmeProjectActionInfo Action="File" Source="config/hpl_sysctrl_config.h" IsConfig="true" Hash="LDtn/weaq0h5xlR2XTJxqQ" />
-          <AcmeProjectActionInfo Action="File" Source="config/peripheral_clk_config.h" IsConfig="true" Hash="w3rqbCqrIrZoDiZ+3QwObA" />
+          <AcmeProjectActionInfo Action="File" Source="config/hpl_sysctrl_config.h" IsConfig="true" Hash="+PAOXyF2HAxDG0hOOlgYww" />
+          <AcmeProjectActionInfo Action="File" Source="config/peripheral_clk_config.h" IsConfig="true" Hash="98koNlTdzzXvaDm3SxLoIg" />
         </AcmeActionInfos>
         <NonsecureFilesInfo />
       </AcmeProjectConfig>
@@ -206,7 +206,7 @@
     </ListValues>
   </armgcc.linker.libraries.LibrarySearchPaths>
   <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
-  <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd21g18au_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd21g18a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
   <armgcc.assembler.general.IncludePaths>
     <ListValues>
       <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
@@ -296,7 +296,7 @@
     </ListValues>
   </armgcc.linker.libraries.LibrarySearchPaths>
   <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
-  <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd21g18au_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd21g18a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
   <armgcc.assembler.general.IncludePaths>
     <ListValues>
       <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
@@ -684,10 +684,10 @@
     <Folder Include="hri\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Device_Startup\samd21g18au_flash.ld">
+    <None Include="Device_Startup\samd21g18a_flash.ld">
       <SubType>compile</SubType>
     </None>
-    <None Include="Device_Startup\samd21g18au_sram.ld">
+    <None Include="Device_Startup\samd21g18a_sram.ld">
       <SubType>compile</SubType>
     </None>
   </ItemGroup>

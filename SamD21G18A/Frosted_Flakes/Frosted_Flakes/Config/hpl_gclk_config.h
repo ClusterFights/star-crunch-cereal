@@ -67,7 +67,7 @@
 // <i> This defines the clock source for generic clock generator 0
 // <id> gclk_gen_0_oscillator
 #ifndef CONF_GCLK_GEN_0_SRC
-#define CONF_GCLK_GEN_0_SRC GCLK_GENCTRL_SRC_OSC8M
+#define CONF_GCLK_GEN_0_SRC GCLK_GENCTRL_SRC_DFLL48M
 #endif
 // </h>
 
@@ -218,7 +218,7 @@
 // <i> This defines the clock source for generic clock generator 2
 // <id> gclk_gen_2_oscillator
 #ifndef CONF_GCLK_GEN_2_SRC
-#define CONF_GCLK_GEN_2_SRC GCLK_GENCTRL_SRC_XOSC32K
+#define CONF_GCLK_GEN_2_SRC GCLK_GENCTRL_SRC_XOSC
 #endif
 // </h>
 
@@ -294,7 +294,7 @@
 // <i> This defines the clock source for generic clock generator 3
 // <id> gclk_gen_3_oscillator
 #ifndef CONF_GCLK_GEN_3_SRC
-#define CONF_GCLK_GEN_3_SRC GCLK_GENCTRL_SRC_OSC32K
+#define CONF_GCLK_GEN_3_SRC GCLK_GENCTRL_SRC_OSC8M
 #endif
 // </h>
 
@@ -303,7 +303,7 @@
 // <i>
 // <id> gclk_gen_3_div
 #ifndef CONF_GCLK_GEN_3_DIV
-#define CONF_GCLK_GEN_3_DIV 1
+#define CONF_GCLK_GEN_3_DIV 64
 #endif
 
 // </h>

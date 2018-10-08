@@ -1,5 +1,5 @@
 format_version: '2'
-name: CornFlakes
+name: Frosted_Flakes
 versions:
   api: '1.0'
   backend: 1.4.93
@@ -10,14 +10,14 @@ versions:
   frontend: 1.4.1787
 board:
   identifier: CustomBoard
-  device: SAMD21G18A-UU
+  device: SAMD21G18A-MF
 details: null
 application: null
 middlewares: {}
 drivers:
   GCLK:
     user_label: GCLK
-    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-UU::GCLK::driver_config_definition::GCLK::HAL:HPL:GCLK
+    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-MF::GCLK::driver_config_definition::GCLK::HAL:HPL:GCLK
     functionality: System
     api: HAL:HPL:GCLK
     configuration:
@@ -71,16 +71,16 @@ drivers:
       gclk_arch_gen_7_oov: false
       gclk_gen_0_div: 1
       gclk_gen_0_div_sel: false
-      gclk_gen_0_oscillator: 8MHz Internal Oscillator (OSC8M)
+      gclk_gen_0_oscillator: Digital Frequency Locked Loop (DFLL48M)
       gclk_gen_1_div: 1
       gclk_gen_1_div_sel: false
       gclk_gen_1_oscillator: External Crystal Oscillator 0.4-32MHz (XOSC)
       gclk_gen_2_div: 1
       gclk_gen_2_div_sel: false
-      gclk_gen_2_oscillator: 32kHz External Crystal Oscillator (XOSC32K)
-      gclk_gen_3_div: 1
+      gclk_gen_2_oscillator: External Crystal Oscillator 0.4-32MHz (XOSC)
+      gclk_gen_3_div: 64
       gclk_gen_3_div_sel: false
-      gclk_gen_3_oscillator: 32kHz High Accuracy Internal Oscillator (OSC32K)
+      gclk_gen_3_oscillator: 8MHz Internal Oscillator (OSC8M)
       gclk_gen_4_div: 1
       gclk_gen_4_div_sel: false
       gclk_gen_4_oscillator: External Crystal Oscillator 0.4-32MHz (XOSC)
@@ -99,7 +99,7 @@ drivers:
       domain_group: null
   PM:
     user_label: PM
-    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-UU::PM::driver_config_definition::PM::HAL:HPL:PM
+    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-MF::PM::driver_config_definition::PM::HAL:HPL:PM
     functionality: System
     api: HAL:HPL:PM
     configuration:
@@ -109,7 +109,7 @@ drivers:
       cpu_clock_source: Generic clock generator 0
       cpu_div: '1'
       enable_cpu_clock: true
-      nvm_wait_states: '0'
+      nvm_wait_states: '1'
     optional_signals: []
     variant: null
     clocks:
@@ -120,7 +120,7 @@ drivers:
         configuration: {}
   VidorSPI:
     user_label: VidorSPI
-    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-UU::SERCOM3::driver_config_definition::SPI.Master::HAL:Driver:SPI.Master.Async
+    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-MF::SERCOM3::driver_config_definition::SPI.Master::HAL:Driver:SPI.Master.Async
     functionality: SPI
     api: HAL:Driver:SPI_Master_Async
     configuration:
@@ -160,7 +160,7 @@ drivers:
           slow_gclk_selection: Generic clock generator 3
   DMAC:
     user_label: DMAC
-    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-UU::DMAC::driver_config_definition::DMAC::HAL:HPL:DMAC
+    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-MF::DMAC::driver_config_definition::DMAC::HAL:HPL:DMAC
     functionality: System
     api: HAL:HPL:DMAC
     configuration:
@@ -440,7 +440,7 @@ drivers:
       domain_group: null
   SYSCTRL:
     user_label: SYSCTRL
-    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-UU::SYSCTRL::driver_config_definition::SYSCTRL::HAL:HPL:SYSCTRL
+    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-MF::SYSCTRL::driver_config_definition::SYSCTRL::HAL:HPL:SYSCTRL
     functionality: System
     api: HAL:HPL:SYSCTRL
     configuration:
@@ -448,23 +448,23 @@ drivers:
       dfll48m_arch_calibration: false
       dfll48m_arch_ccdis: false
       dfll48m_arch_coarse: 31
-      dfll48m_arch_enable: false
+      dfll48m_arch_enable: true
       dfll48m_arch_fine: 512
       dfll48m_arch_llaw: false
       dfll48m_arch_ondemand: true
-      dfll48m_arch_qldis: false
+      dfll48m_arch_qldis: true
       dfll48m_arch_runstdby: false
       dfll48m_arch_stable: false
       dfll48m_arch_usbcrm: false
       dfll48m_arch_waitlock: false
-      dfll48m_mode: Open Loop Mode
-      dfll48m_mul: 0
+      dfll48m_mode: Closed Loop Mode
+      dfll48m_mul: 3072
       dfll48m_ref_clock: Generic clock generator 3
       dfll_arch_cstep: 1
       dfll_arch_fstep: 1
-      enable_dfll48m: false
+      enable_dfll48m: true
       enable_fdpll96m: false
-      enable_osc32k: true
+      enable_osc32k: false
       enable_osc8m: true
       enable_osculp32k: true
       enable_xosc: false
@@ -480,7 +480,7 @@ drivers:
       osc32k_arch_calib: 0
       osc32k_arch_en1k: false
       osc32k_arch_en32k: false
-      osc32k_arch_enable: true
+      osc32k_arch_enable: false
       osc32k_arch_ondemand: true
       osc32k_arch_overwrite_calibration: false
       osc32k_arch_runstdby: false
@@ -491,7 +491,7 @@ drivers:
       osc8m_arch_ondemand: true
       osc8m_arch_overwrite_calibration: false
       osc8m_arch_runstdby: false
-      osc8m_presc: '1'
+      osc8m_presc: '8'
       osculp32k_arch_calib: 0
       osculp32k_arch_overwrite_calibration: false
       osculp32k_arch_wrtlock: false
@@ -519,20 +519,20 @@ drivers:
 pads:
   PA16:
     name: PA16
-    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-UU::pad::PA16
+    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-MF::pad::PA16
     mode: Digital output
     user_label: PA16
     configuration: null
-  PA19:
-    name: PA19
-    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-UU::pad::PA19
-    mode: Digital input
-    user_label: PA19
-    configuration: null
   PA17:
     name: PA17
-    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-UU::pad::PA17
+    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-MF::pad::PA17
     mode: Digital output
     user_label: PA17
+    configuration: null
+  PA19:
+    name: PA19
+    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-MF::pad::PA19
+    mode: Digital input
+    user_label: PA19
     configuration: null
 toolchain_options: []

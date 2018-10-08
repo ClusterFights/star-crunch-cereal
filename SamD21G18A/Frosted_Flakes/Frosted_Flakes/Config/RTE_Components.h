@@ -39,8 +39,8 @@
  *
  * \acme_license_stop
  *
- * Project: CornFlakes
- * Target:  ATSAMD21G18AU 
+ * Project: Frosted_Flakes
+ * Target:  ATSAMD21G18A 
  *
  **/
 

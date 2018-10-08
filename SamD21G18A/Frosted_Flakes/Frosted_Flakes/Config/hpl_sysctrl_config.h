@@ -84,7 +84,7 @@
 // <i> Default: No Prescaling
 // <id> osc8m_presc
 #ifndef CONF_OSC8M_PRESC
-#define CONF_OSC8M_PRESC SYSCTRL_OSC8M_PRESC_0_Val
+#define CONF_OSC8M_PRESC SYSCTRL_OSC8M_PRESC_3_Val
 #endif
 
 // <q> Overwrite Default Osc Calibration
@@ -109,7 +109,7 @@
 // <i> Indicates whether configuration for OSC32K is enabled or not
 // <id> enable_osc32k
 #ifndef CONF_OSC32K_CONFIG
-#define CONF_OSC32K_CONFIG 1
+#define CONF_OSC32K_CONFIG 0
 #endif
 
 // <h> 32kHz Internal Oscillator (OSC32K) Control
@@ -117,7 +117,7 @@
 // <i> Indicates whether Internal 32K Oscillator is enabled or not
 // <id> osc32k_arch_enable
 #ifndef CONF_OSC32K_ENABLE
-#define CONF_OSC32K_ENABLE 1
+#define CONF_OSC32K_ENABLE 0
 #endif
 
 // <q> On Demand Control
@@ -410,7 +410,7 @@
 // <i> Indicates whether configuration for DFLL is enabled or not
 // <id> enable_dfll48m
 #ifndef CONF_DFLL_CONFIG
-#define CONF_DFLL_CONFIG 0
+#define CONF_DFLL_CONFIG 1
 #endif
 
 // <y> Reference Clock Source
@@ -433,7 +433,7 @@
 // <i> Indicates whether DFLL is enabled or not
 // <id> dfll48m_arch_enable
 #ifndef CONF_DFLL_ENABLE
-#define CONF_DFLL_ENABLE 0
+#define CONF_DFLL_ENABLE 1
 #endif
 
 // <q> Wait Lock
@@ -454,7 +454,7 @@
 // <i> Quick Lock Disable
 // <id> dfll48m_arch_qldis
 #ifndef CONF_DFLL_QLDIS
-#define CONF_DFLL_QLDIS 0
+#define CONF_DFLL_QLDIS 1
 #endif
 
 // <q> Chill Cycle Disable
@@ -520,7 +520,7 @@
 // <i> Mode
 // <id> dfll48m_mode
 #ifndef CONF_DFLL_MODE
-#define CONF_DFLL_MODE CONF_DFLL_OPEN_LOOP_MODE
+#define CONF_DFLL_MODE CONF_DFLL_CLOSED_LOOP_MODE
 #endif
 
 // <o> Coarse Maximum Step <0x0-0x1F>
@@ -540,7 +540,7 @@
 //  <i> Default: 0
 //  <id> dfll48m_mul
 #ifndef CONF_DFLL_MUL
-#define CONF_DFLL_MUL 0
+#define CONF_DFLL_MUL 3072
 #endif
 
 // <e> DFLL Calibration Overwrite
