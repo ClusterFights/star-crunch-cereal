@@ -12,8 +12,12 @@
 				MOSI PA16
 				SCK  PA17
 				CS - N/A <-- Haven't picked yet
+				
+	USB_CDC - USB
+				Data+ PA25
+				Data- PA24
+				
 */
-
 #include <atmel_start.h>
 
 int main(void)
