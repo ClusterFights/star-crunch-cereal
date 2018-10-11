@@ -42,11 +42,11 @@
 
 /* Section containing first descriptors for all DMAC channels */
 COMPILER_ALIGNED(16)
-static DmacDescriptor _descriptor_section[DMAC_CH_NUM] SECTION_DMAC_DESCRIPTOR;
+DmacDescriptor _descriptor_section[DMAC_CH_NUM] SECTION_DMAC_DESCRIPTOR;
 
 /* Section containing current descriptors for all DMAC channels */
 COMPILER_ALIGNED(16)
-static DmacDescriptor _write_back_section[DMAC_CH_NUM] SECTION_DMAC_DESCRIPTOR;
+DmacDescriptor _write_back_section[DMAC_CH_NUM] SECTION_DMAC_DESCRIPTOR;
 
 /* Array containing callbacks for DMAC channels */
 static struct _dma_resource _resources[DMAC_CH_NUM];

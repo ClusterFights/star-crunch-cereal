@@ -23,16 +23,11 @@ extern "C" {
 
 #include <hal_spi_m_async.h>
 
-#include "hal_usb_device.h"
-
 extern struct spi_m_async_descriptor VidorSPI;
 
 void VidorSPI_PORT_init(void);
 void VidorSPI_CLOCK_init(void);
 void VidorSPI_init(void);
-
-void USB_DEVICE_INSTANCE_CLOCK_init(void);
-void USB_DEVICE_INSTANCE_init(void);
 
 /**
  * \brief Perform system initialization, initialize pins and clocks for

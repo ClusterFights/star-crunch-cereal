@@ -21,9 +21,10 @@
 
 static uint8_t example_VidorSPI[12] = "Hello World!";
 
+
 static void complete_cb_VidorSPI(const struct spi_m_async_descriptor *const io_descr)
 {
-	/* Transfer completed */
+	/*spiComplete = true;*/
 }
 
 void VidorSPI_example(void)
