@@ -1,0 +1,7 @@
+digraph Arch
+{
+	sdcard[label="SD Card\n(64GB, UHS-II)"];
+	samd[label="Microchip SAMD21"];
+
+	sdcard -> samd;
+}
