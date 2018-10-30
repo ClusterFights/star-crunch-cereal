@@ -26,7 +26,7 @@ end
 
 endmodule
 
-
+//Test bench for counter module
 
 module counter_tb;
 

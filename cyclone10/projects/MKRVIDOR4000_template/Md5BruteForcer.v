@@ -5,7 +5,6 @@ module Md5BruteForcer(
 	input wire [31:0] dataIn,
 	output reg hasMatched = 0,
 	output reg [31:0] dataOut = 0,
-	output reg [127:0] text = 0,
 	output reg resetGenerator = 0
 );
 
@@ -17,7 +16,7 @@ reg [63:0] count;
 reg [7:0] min = 'h61, max = 'h7a;
 wire [511:0] chunk;
 
-reg [127:0] textBuffer [0:63];
+//reg [127:0] textBuffer [0:63];
 
 Md5PrintableChunkGenerator g(
 	.clk(clk), 
@@ -55,79 +54,14 @@ always @(posedge clk or posedge reset2)
 		if (reset2)
 			begin
 				matchFound <= 0;
-				text <= 0;
+				//text <= 0;
             count <= 0;
 			end
 		else
 			begin
 				if (!matchFound)
 					begin
-						textBuffer[0] <= chunk[127:0];
-						textBuffer[1] <= textBuffer[0];
-						textBuffer[2] <= textBuffer[1];
-						textBuffer[3] <= textBuffer[2];
-						textBuffer[4] <= textBuffer[3];
-						textBuffer[5] <= textBuffer[4];
-						textBuffer[6] <= textBuffer[5];
-						textBuffer[7] <= textBuffer[6];
-						textBuffer[8] <= textBuffer[7];
-						textBuffer[9] <= textBuffer[8];
-						textBuffer[10] <= textBuffer[9];
-						textBuffer[11] <= textBuffer[10];
-						textBuffer[12] <= textBuffer[11];
-						textBuffer[13] <= textBuffer[12];
-						textBuffer[14] <= textBuffer[13];
-						textBuffer[15] <= textBuffer[14];
-						textBuffer[16] <= textBuffer[15];
-						textBuffer[17] <= textBuffer[16];
-						textBuffer[18] <= textBuffer[17];
-						textBuffer[19] <= textBuffer[18];
-						textBuffer[20] <= textBuffer[19];
-						textBuffer[21] <= textBuffer[20];
-						textBuffer[22] <= textBuffer[21];
-						textBuffer[23] <= textBuffer[22];
-						textBuffer[24] <= textBuffer[23];
-						textBuffer[25] <= textBuffer[24];
-						textBuffer[26] <= textBuffer[25];
-						textBuffer[27] <= textBuffer[26];
-						textBuffer[28] <= textBuffer[27];
-						textBuffer[29] <= textBuffer[28];
-						textBuffer[30] <= textBuffer[29];
-						textBuffer[31] <= textBuffer[30];
-						textBuffer[32] <= textBuffer[31];
-						textBuffer[33] <= textBuffer[32];
-						textBuffer[34] <= textBuffer[33];
-						textBuffer[35] <= textBuffer[34];
-						textBuffer[36] <= textBuffer[35];
-						textBuffer[37] <= textBuffer[36];
-						textBuffer[38] <= textBuffer[37];
-						textBuffer[39] <= textBuffer[38];
-						textBuffer[40] <= textBuffer[39];
-						textBuffer[41] <= textBuffer[40];
-						textBuffer[42] <= textBuffer[41];
-						textBuffer[43] <= textBuffer[42];
-						textBuffer[44] <= textBuffer[43];
-						textBuffer[45] <= textBuffer[44];
-						textBuffer[46] <= textBuffer[45];
-						textBuffer[47] <= textBuffer[46];
-						textBuffer[48] <= textBuffer[47];
-						textBuffer[49] <= textBuffer[48];
-						textBuffer[50] <= textBuffer[49];
-						textBuffer[51] <= textBuffer[50];
-						textBuffer[52] <= textBuffer[51];
-						textBuffer[53] <= textBuffer[52];
-						textBuffer[54] <= textBuffer[53];
-						textBuffer[55] <= textBuffer[54];
-						textBuffer[56] <= textBuffer[55];
-						textBuffer[57] <= textBuffer[56];
-						textBuffer[58] <= textBuffer[57];
-						textBuffer[59] <= textBuffer[58];
-						textBuffer[60] <= textBuffer[59];
-						textBuffer[61] <= textBuffer[60];
-						textBuffer[62] <= textBuffer[61];
-						textBuffer[63] <= textBuffer[62];
-						text <= textBuffer[63];
-						
+					
 						if (a == expectedA &&
 							b == expectedB &&
 							c == expectedC &&

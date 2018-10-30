@@ -26,6 +26,7 @@ module MKRVIDOR4000_top
   input         iSAM_INT,
   output        oSAM_INT,
   
+  /*
   // SDRAM
   output        oSDRAM_CLK,
   output [11:0] oSDRAM_ADDR,
@@ -37,12 +38,14 @@ module MKRVIDOR4000_top
   output [1:0]  oSDRAM_DQM,
   output        oSDRAM_RASn,
   output        oSDRAM_WEn,
+  */
 
   // SAM D21 PINS
   inout         bMKR_AREF,
   inout  [6:0]  bMKR_A,
   inout  [14:0] bMKR_D,
   
+  /*
   // Mini PCIe
   inout         bPEX_RST,
   inout         bPEX_PIN6,
@@ -116,9 +119,11 @@ module MKRVIDOR4000_top
   inout         iFLASH_MISO,
   inout         oFLASH_HOLD,
   inout         oFLASH_WP
+  */
 
 );
 
+/
 // signal declaration
 
 wire        wOSC_CLK;
