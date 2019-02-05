@@ -1,4 +1,5 @@
 `timescale 1ns / 1ns
+//`include "md5-core.v" // look at http://v2kparse.sourceforge.net/includes.pdf
 
 module Md5CoreTest;
 

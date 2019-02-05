@@ -1,0 +1,37 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Sun Nov 11 20:29:31 2018
+[*]
+[dumpfile] "/home/brandonb/projects/ClusterFight/MunchMan/Level_2_Ducky/fpga/sim/top_tb/sim_top.vcd"
+[dumpfile_mtime] "Sun Nov 11 20:03:04 2018"
+[dumpfile_size] 491421
+[savefile] "/home/brandonb/projects/ClusterFight/MunchMan/Level_2_Ducky/fpga/sim/top_tb/cmd4.gtkw"
+[timestart] 0
+[size] 1855 1056
+[pos] -1 -1
+*-18.242172 1271000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] sim_top_tb.
+[treeopen] sim_top_tb.sim_top_inst.
+[sst_width] 225
+[signals_width] 349
+[sst_expanded] 1
+[sst_vpaned_height] 320
+@28
+sim_top_tb.clk
+sim_top_tb.reset
+@2024
+^1 /home/brandonb/projects/ClusterFight/MunchMan/Level_2_Ducky/fpga/sim/top_tb/tb_state.txt
+sim_top_tb.tb_state[7:0]
+@24
+sim_top_tb.tb_char_count[10:0]
+@28
+sim_top_tb.txd_start
+@22
+sim_top_tb.txd_data[7:0]
+@2024
+^2 /home/brandonb/projects/ClusterFight/MunchMan/Level_2_Ducky/fpga/sim/top_tb/cmd_state.txt
+sim_top_tb.sim_top_inst.cmd_parser_inst.cmd_state[7:0]
+@29
+sim_top_tb.sim_top_inst.cmd_parser_inst.rxd_data_ready
+[pattern_trace] 1
+[pattern_trace] 0

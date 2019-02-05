@@ -1,0 +1,40 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Fri Jan 25 03:10:46 2019
+[*]
+[dumpfile] "/home/brandonb/Projects/ClusterFights/MunchMan/Level_3_MiniWheat/fpga/sim/parallel_bus_tb/parallel_bus.vcd"
+[dumpfile_mtime] "Fri Jan 25 03:08:59 2019"
+[dumpfile_size] 103481
+[savefile] "/home/brandonb/Projects/ClusterFights/MunchMan/Level_3_MiniWheat/fpga/sim/parallel_bus_tb/parallel_bus.gtkw"
+[timestart] 0
+[size] 1920 995
+[pos] -1 -1
+*-15.556977 127500 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] parallel_bus_tb.
+[sst_width] 233
+[signals_width] 243
+[sst_expanded] 1
+[sst_vpaned_height] 281
+@28
+parallel_bus_tb.clk_100mhz
+parallel_bus_tb.reset
+parallel_bus_tb.bus_rnw
+parallel_bus_tb.bus_clk
+@24
+parallel_bus_tb.bus_data[7:0]
+@28
+parallel_bus_tb.ready
+@22
+parallel_bus_tb.txd_data[7:0]
+@28
+parallel_bus_tb.valid
+@22
+parallel_bus_tb.count[7:0]
+parallel_bus_tb.par8_transmitter_inst.trans_state[3:0]
+@28
+parallel_bus_tb.par8_transmitter_inst.busy
+parallel_bus_tb.par8_transmitter_inst.ready
+@29
+parallel_bus_tb.par8_transmitter_inst.valid
+[pattern_trace] 1
+[pattern_trace] 0
