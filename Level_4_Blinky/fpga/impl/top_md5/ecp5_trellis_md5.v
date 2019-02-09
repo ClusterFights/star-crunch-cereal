@@ -1,17 +1,19 @@
 /*
 *****************************
-* MODULE : arty_s7_md5
+* MODULE : ecp5_trellis_md5.v
 *
 * This module implements the md5
 * hashing accelerator.
 *
-* Target Board: Arty S7-50 Digilent board
+* Target Board: Lattice ECP5-5G Evaluation Board
 *
-* Author : Brandon Bloodget
+* Modified by : Patrick Lloyd
+* Original by : Brandon Blodget
 * Create Date : 11/3/2018 
 * 
 * Updates:
 * 01/25/2019 : Updated to support parallel 8 interface
+* 02/04/2019 : Project modified to synthesize for ECP5
 *
 *****************************
 */
@@ -19,7 +21,7 @@
 // Force error when implicit net has no type.
 `default_nettype none
 
-module arty_s7_md5 #
+module ecp5_trellis_md5 #
 (
     parameter integer NUM_LEDS = 4
 )
