@@ -1,0 +1,18 @@
+Running in Lattice mode
+
+Starting:    /usr/local/diamond/3.10_x64/synpbase/linux_a_64/mbin/synplify
+Install:     /usr/local/diamond/3.10_x64/synpbase
+Hostname:    voyager2
+Date:        Sun Jan 27 20:59:09 2019
+Version:     M-2017.03L-SP1-1
+
+Arguments:   -product synplify_pro -tcl /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/launch_synplify.tcl
+ProductType: synplify_pro
+
+
+
+
+
+No project opened.
+TCL script complete: "/home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/launch_synplify.tcl"
+exit status=0

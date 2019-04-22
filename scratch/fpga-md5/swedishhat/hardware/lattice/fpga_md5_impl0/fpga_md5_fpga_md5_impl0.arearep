@@ -1,0 +1,141 @@
+----------------------------------------------------------------------
+Report for cell fpga_md5.TECH
+Register bits:  24665 of 84255 (29.274%)
+I/O cells:      19
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C      3493          100.0
+                            FD1P3AX      8544          100.0
+                            FD1P3AY        40          100.0
+                            FD1P3DX       139          100.0
+                            FD1P3IX        19          100.0
+                            FD1P3JX         1          100.0
+                            FD1S3AX     15800          100.0
+                            FD1S3DX         8          100.0
+                            FD1S3IX       114          100.0
+                                GSR         1          100.0
+                                 IB         4          100.0
+                                INV         1          100.0
+                            L6MUX21         3          100.0
+                               LUT4      2132          100.0
+                              MUX21         1          100.0
+                                 OB        15          100.0
+                              PFUMX        62          100.0
+SUB MODULES
+                            Md5Core         1
+         Md5PrintableChunkGenerator         1
+                cross_domain_buffer         1
+                        delay(ms=1)         1
+                       delay(ms=10)         1
+                    lcd_line_writer         1
+             liquid_crystal_display         1
+                   md5_brute_forcer         1
+                          pll_12_50         1
+                          spi_slave         1
+                              TOTAL     30387
+----------------------------------------------------------------------
+Report for cell pll_12_50.NamedPorts
+Instance Path : 
+                              TOTAL         0
+----------------------------------------------------------------------
+Report for cell lcd_line_writer.v1
+Instance Path : lcd_line_writer_inst0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C         3            0.1
+                            FD1P3AX         1            0.0
+                            FD1P3IX        14           73.7
+                            L6MUX21         3          100.0
+                               LUT4        90            4.2
+                              PFUMX        36           58.1
+                              TOTAL       147
+----------------------------------------------------------------------
+Report for cell spi_slave.v1
+Instance Path : spi_slave_inst0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C         9            0.3
+                            FD1S3IX        50           43.9
+                               LUT4        16            0.8
+                              TOTAL        75
+----------------------------------------------------------------------
+Report for cell liquid_crystal_display.v1
+Instance Path : liquid_crystal_display_inst0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        34            1.0
+                            FD1P3AX        17            0.2
+                            FD1P3IX         3           15.8
+                            FD1S3IX        64           56.1
+                               LUT4       115            5.4
+                              MUX21         1          100.0
+                              PFUMX        14           22.6
+SUB MODULES
+                        delay(ms=1)         1
+                       delay(ms=10)         1
+                              TOTAL       250
+----------------------------------------------------------------------
+Report for cell delay(ms=10).v1
+Instance Path : liquid_crystal_display_inst0.wakeupDelay
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        17            0.5
+                            FD1P3IX         1            5.3
+                            FD1S3IX        32           28.1
+                               LUT4        13            0.6
+                              TOTAL        63
+----------------------------------------------------------------------
+Report for cell delay(ms=1).v1
+Instance Path : liquid_crystal_display_inst0.pulseDelay
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        17            0.5
+                            FD1P3IX         1            5.3
+                            FD1S3IX        32           28.1
+                               LUT4        12            0.6
+                              TOTAL        62
+----------------------------------------------------------------------
+Report for cell md5_brute_forcer.v1
+Instance Path : md5_brute_forcer_inst0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        81            2.3
+                            FD1P3AX      8462           99.0
+                            FD1P3AY        40          100.0
+                            FD1P3DX       139          100.0
+                            FD1P3IX         2           10.5
+                            FD1P3JX         1          100.0
+                            FD1S3AX     13686           86.6
+                            FD1S3DX         8          100.0
+                               LUT4      1787           83.8
+                              PFUMX         5            8.1
+SUB MODULES
+                            Md5Core         1
+         Md5PrintableChunkGenerator         1
+                              TOTAL     24213
+----------------------------------------------------------------------
+Report for cell Md5Core.v1
+Instance Path : md5_brute_forcer_inst0.md5
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX     13686           86.6
+                               LUT4      1056           49.5
+                              TOTAL     14742
+----------------------------------------------------------------------
+Report for cell Md5PrintableChunkGenerator.v1
+Instance Path : md5_brute_forcer_inst0.g
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        48            1.4
+                            FD1P3DX       139          100.0
+                            FD1S3DX         8          100.0
+                               LUT4       648           30.4
+                              PFUMX         3            4.8
+                              TOTAL       846
+----------------------------------------------------------------------
+Report for cell cross_domain_buffer.v1
+Instance Path : cross_domain_buffer_inst0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        34            0.2
+                              TOTAL        34

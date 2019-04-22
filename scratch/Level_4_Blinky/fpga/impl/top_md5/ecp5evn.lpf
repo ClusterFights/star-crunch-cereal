@@ -1,47 +1,99 @@
-//LOCATE COMP "clk_12mhz" SITE "A10";
-//IOBUF PORT "clk_12mhz" IO_TYPE=LVCMOS33;
+// CLOCKS
+// ---------------------------------------------
+// 12 MHz from U1 FTDI Chip
+IOBUF	PORT	"clk_12mhz"		IO_TYPE=LVCMOS33;
+LOCATE	COMP	"clk_12mhz"		SITE "A10";
+// ---------------------------------------------
 
-LOCATE COMP "reset_n" SITE "P4";
-IOBUF PORT "reset_n" IO_TYPE=LVCMOS33;
+// LEDS
+// ---------------------------------------------
+IOBUF	PORT	"led[0]"		IO_TYPE=LVCMOS25;
+LOCATE	COMP	"led[0]"		SITE "A13";
 
-LOCATE COMP "led_n[0]" SITE "A13";
-LOCATE COMP "led_n[1]" SITE "A12";
-LOCATE COMP "led_n[2]" SITE "B19";
-LOCATE COMP "led_n[3]" SITE "A18";
-LOCATE COMP "led_n[4]" SITE "B18";
-LOCATE COMP "led_n[5]" SITE "C17";
-LOCATE COMP "led_n[6]" SITE "A17";
-LOCATE COMP "led_n[7]" SITE "B17";
+IOBUF	PORT	"led[1]"		IO_TYPE=LVCMOS25;
+LOCATE	COMP	"led[1]"		SITE "A12";
 
-IOBUF PORT "led_n[0]" IO_TYPE=LVCMOS25;
-IOBUF PORT "led_n[1]" IO_TYPE=LVCMOS25;
-IOBUF PORT "led_n[2]" IO_TYPE=LVCMOS25;
-IOBUF PORT "led_n[3]" IO_TYPE=LVCMOS25;
-IOBUF PORT "led_n[4]" IO_TYPE=LVCMOS25;
-IOBUF PORT "led_n[5]" IO_TYPE=LVCMOS25;
-IOBUF PORT "led_n[6]" IO_TYPE=LVCMOS25;
-IOBUF PORT "led_n[7]" IO_TYPE=LVCMOS25;
+IOBUF	PORT	"led[2]"		IO_TYPE=LVCMOS25;
+LOCATE	COMP	"led[2]"		SITE "B19";
 
-//LOCATE COMP "lcd_db[4]" SITE "K2";
-//LOCATE COMP "lcd_db[5]" SITE "A15";
-//LOCATE COMP "lcd_db[6]" SITE "H2";
-//LOCATE COMP "lcd_db[7]" SITE "J4";
-//LOCATE COMP "lcd_en" SITE "J3";
-//LOCATE COMP "lcd_rs" SITE "L4";
+IOBUF	PORT	"led[3]"		IO_TYPE=LVCMOS25;
+LOCATE	COMP	"led[3]"		SITE "A18";
 
-//IOBUF PORT "lcd_db[4]" IO_TYPE=LVCMOS33;
-//IOBUF PORT "lcd_db[5]" IO_TYPE=LVCMOS33;
-//IOBUF PORT "lcd_db[6]" IO_TYPE=LVCMOS33;
-//IOBUF PORT "lcd_db[7]" IO_TYPE=LVCMOS33;
-//IOBUF PORT "lcd_en" IO_TYPE=LVCMOS33;
-//IOBUF PORT "lcd_rs" IO_TYPE=LVCMOS33;
+IOBUF	PORT	"led0_r"		IO_TYPE=LVCMOS25;
+LOCATE	COMP	"led0_r"		SITE "B18";
 
-LOCATE COMP "spis_miso" SITE "C14";
-LOCATE COMP "spis_mosi" SITE "P1";
-LOCATE COMP "spis_sck" SITE "D14";
-LOCATE COMP "spis_ss" SITE "K4";
+IOBUF	PORT	"led0_g"		IO_TYPE=LVCMOS25;
+LOCATE	COMP	"led0_g"		SITE "C17";
 
-IOBUF PORT "spis_miso" IO_TYPE=LVCMOS33;
-IOBUF PORT "spis_mosi" IO_TYPE=LVCMOS33;
-IOBUF PORT "spis_sck" IO_TYPE=LVCMOS33;
-IOBUF PORT "spis_ss" IO_TYPE=LVCMOS33;
+IOBUF	PORT	"led0_b"		IO_TYPE=LVCMOS25;
+LOCATE	COMP	"led0_b"		SITE "A17";
+// ---------------------------------------------
+
+// PUSH BUTTONS
+// ---------------------------------------------
+IOBUF	PORT	"reset_n"		IO_TYPE=LVCMOS33;
+LOCATE	COMP	"reset_n"		SITE "P4";
+// ---------------------------------------------
+
+
+// RASPI HEADER
+// ---------------------------------------------
+IOBUF	PORT	"bus_data[15]"	IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_data[15]"	SITE "U17";			// RASP_IO04
+
+IOBUF	PORT	"bus_data[14]"	IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_data[14]"	SITE "N19";			// RASP_IO17
+
+IOBUF	PORT	"bus_data[13]"	IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_data[13]"	SITE "M18";			// RASP_IO27
+
+IOBUF	PORT	"bus_data[12]"	IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_data[12]"	SITE "N17";			// RASP_IO22
+
+IOBUF	PORT	"bus_data[11]"	IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_data[11]"	SITE "U20";			// RASP_IO10
+
+IOBUF	PORT	"bus_data[10]"	IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_data[10]"	SITE "T19";			// RASP_IO09
+
+IOBUF	PORT	"bus_data[9]"	IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_data[9]"	SITE "R20";			// RASP_IO11
+
+IOBUF	PORT	"bus_data[8]"	IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_data[8]"	SITE "U18";			// RASP_IO05
+
+IOBUF	PORT	"bus_data[7]"	IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_data[7]"	SITE "T16";			// RASP_IO18
+
+IOBUF	PORT	"bus_data[6]"	IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_data[6]"	SITE "P17";			// RASP_IO23
+
+IOBUF	PORT	"bus_data[5]"	IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_data[5]"	SITE "M17";			// RASP_IO24
+
+IOBUF	PORT	"bus_data[4]"	IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_data[4]"	SITE "N18";			// RASP_IO25
+
+IOBUF	PORT	"bus_data[3]"	IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_data[3]"	SITE "T20";			// RASP_IO12
+
+IOBUF	PORT	"bus_data[2]"	IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_data[2]"	SITE "P19";			// RASP_IO16
+
+IOBUF	PORT	"bus_data[1]"	IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_data[1]"	SITE "P16";			// RASP_IO20
+
+IOBUF	PORT	"bus_data[0]"	IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_data[0]"	SITE "R16";			// RASP_IO21
+
+IOBUF	PORT	"bus_rnw"		IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_rnw"		SITE "N16";			// RASP_IO26
+
+IOBUF	PORT	"bus_clk"		IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_clk"		SITE "R17";			// RASP_IO19
+
+IOBUF	PORT	"bus_done"		IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_done"		SITE "P20";			// RASP_IO13
+
+IOBUF	PORT	"bus_match"		IO_TYPE=LVCMOS33;
+LOCATE	COMP	"bus_match"		SITE "T18";

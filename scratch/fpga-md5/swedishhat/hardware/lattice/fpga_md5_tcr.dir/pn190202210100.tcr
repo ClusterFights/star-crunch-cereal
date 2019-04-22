@@ -1,0 +1,17 @@
+#Start recording tcl command: 1/27/2019 17:42:18
+#Project Location: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice; Project name: fpga_md5
+prj_project new -name "fpga_md5" -impl "fpga_md5_impl0" -dev LFE5UM5G-85F-8BG381C -synthesis "lse"
+file copy -force -- "/home/patrick/dev/fpga-md5/swedishhat/hardware/cross_domain_buffer.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/delay.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/fpga-md5.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/lcd_line_writer.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/liquid_crystal_display.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source"
+file copy -force -- "/home/patrick/dev/fpga-md5/swedishhat/hardware/md5_brute_forcer.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/md5_chunk_generator.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/md5_core.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/md5_printable_chunk_generator.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/spi_slave.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source"
+prj_src add "/home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/cross_domain_buffer.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/delay.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/fpga-md5.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/lcd_line_writer.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/liquid_crystal_display.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_brute_forcer.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_chunk_generator.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_core.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v" "/home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/spi_slave.v"
+prj_project save
+prj_src add "/home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/top.v"
+prj_run Synthesis -impl fpga_md5_impl0 -task Lattice_Synthesis
+prj_run Synthesis -impl fpga_md5_impl0 -task Lattice_Synthesis
+prj_run Synthesis -impl fpga_md5_impl0 -task Lattice_Synthesis
+prj_run Synthesis -impl fpga_md5_impl0
+prj_run Synthesis -impl fpga_md5_impl0 -task Lattice_Synthesis
+prj_run Synthesis -impl fpga_md5_impl0 -task Lattice_Synthesis
+launch_synplify_prj fpga_md5_impl0
+prj_dev set -part LFE2-6E-5T144C
+#Stop recording: 2/2/2019 21:01:00

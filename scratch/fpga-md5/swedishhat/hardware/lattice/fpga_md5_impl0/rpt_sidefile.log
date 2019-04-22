@@ -1,0 +1,60 @@
+
+################### Begin Area Report (fpga_md5)######################
+Number of register bits => 24665 of 84255 (29 % )
+CCU2C => 3493
+FD1P3AX => 8544
+FD1P3AY => 40
+FD1P3DX => 139
+FD1P3IX => 19
+FD1P3JX => 1
+FD1S3AX => 15800
+FD1S3DX => 8
+FD1S3IX => 114
+GSR => 1
+IB => 4
+INV => 1
+L6MUX21 => 3
+LUT4 => 2132
+MUX21 => 1
+OB => 15
+PFUMX => 62
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+pll_12_50 => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 5
+  Net : clk_50, loads : 24300
+  Net : cross_domain_buffer_inst0/SYNTHESIZED_WIRE_2, loads : 184
+  Net : clk_12_c, loads : 99
+  Net : spis_sck_c, loads : 50
+  Net : spi_slave_inst0/SYNTHESIZED_WIRE_9, loads : 33
+Clock Enable Nets
+Number of Clock Enables: 53
+Top 10 highest fanout Clock Enables:
+  Net : md5_brute_forcer_inst0/clk_50_enable_5001, loads : 1000
+  Net : md5_brute_forcer_inst0/clk_50_enable_3001, loads : 1000
+  Net : md5_brute_forcer_inst0/clk_50_enable_4001, loads : 1000
+  Net : md5_brute_forcer_inst0/clk_50_enable_1001, loads : 1000
+  Net : md5_brute_forcer_inst0/clk_50_enable_6001, loads : 1000
+  Net : md5_brute_forcer_inst0/clk_50_enable_2001, loads : 1000
+  Net : md5_brute_forcer_inst0/clk_50_enable_8001, loads : 1000
+  Net : md5_brute_forcer_inst0/clk_50_enable_7001, loads : 1000
+  Net : md5_brute_forcer_inst0/clk_50_enable_8193, loads : 192
+  Net : md5_brute_forcer_inst0/matchFound_N_8642, loads : 128
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : md5_brute_forcer_inst0/clk_50_enable_1001, loads : 1000
+  Net : md5_brute_forcer_inst0/clk_50_enable_6001, loads : 1000
+  Net : md5_brute_forcer_inst0/clk_50_enable_7001, loads : 1000
+  Net : md5_brute_forcer_inst0/clk_50_enable_2001, loads : 1000
+  Net : md5_brute_forcer_inst0/clk_50_enable_4001, loads : 1000
+  Net : md5_brute_forcer_inst0/clk_50_enable_3001, loads : 1000
+  Net : md5_brute_forcer_inst0/clk_50_enable_5001, loads : 1000
+  Net : md5_brute_forcer_inst0/clk_50_enable_8001, loads : 1000
+  Net : md5_brute_forcer_inst0/clk_50_enable_8193, loads : 192
+  Net : md5_brute_forcer_inst0/matchFound_N_8642, loads : 191
+################### End Clock Report ##################

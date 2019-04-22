@@ -1,0 +1,713 @@
+<HTML>
+<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
+synthesis:  version Diamond (64-bit) 3.10.3.144.3
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+Sun Jan 27 17:50:39 2019
+
+
+Command Line:  synthesis -f fpga_md5_fpga_md5_impl0_lattice.synproj -gui 
+
+Synthesis options:
+The -a option is ECP5UM5G.
+The -s option is 8.
+The -t option is CABGA381.
+The -d option is LFE5UM5G-85F.
+Using package CABGA381.
+Using performance grade 8.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5UM5G
+
+### Device  : LFE5UM5G-85F
+
+### Package : CABGA381
+
+### Speed   : 8
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Timing
+Top-level module name = fpga_md5.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice (searchpath added)
+-p /usr/local/diamond/3.10_x64/ispfpga/sa5p00g/data (searchpath added)
+-p /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0 (searchpath added)
+-p /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice (searchpath added)
+Verilog design file = /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/cross_domain_buffer.v
+Verilog design file = /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/delay.v
+Verilog design file = /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/fpga-md5.v
+Verilog design file = /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/lcd_line_writer.v
+Verilog design file = /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/liquid_crystal_display.v
+Verilog design file = /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_brute_forcer.v
+Verilog design file = /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_chunk_generator.v
+Verilog design file = /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_core.v
+Verilog design file = /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v
+Verilog design file = /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/spi_slave.v
+Verilog design file = /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/top.v
+NGD file = fpga_md5_fpga_md5_impl0.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /usr/local/diamond/3.10_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5um.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/cross_domain_buffer.v. VERI-1482
+Analyzing Verilog file /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/delay.v. VERI-1482
+Analyzing Verilog file /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/fpga-md5.v. VERI-1482
+Analyzing Verilog file /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/lcd_line_writer.v. VERI-1482
+Analyzing Verilog file /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/liquid_crystal_display.v. VERI-1482
+Analyzing Verilog file /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_brute_forcer.v. VERI-1482
+Analyzing Verilog file /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_chunk_generator.v. VERI-1482
+Analyzing Verilog file /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_core.v. VERI-1482
+Analyzing Verilog file /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v. VERI-1482
+Analyzing Verilog file /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/spi_slave.v. VERI-1482
+Analyzing Verilog file /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/top.v. VERI-1482
+Analyzing Verilog file /usr/local/diamond/3.10_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5um.v. VERI-1482
+Top module name (Verilog): fpga_md5
+INFO - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/fpga-md5.v(10): compiling module fpga_md5. VERI-1018
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/fpga-md5.v(42): instantiating unknown module pll_12_50. VERI-1063
+INFO - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/spi_slave.v(1): compiling module spi_slave. VERI-1018
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/spi_slave.v(22): expression size 32 truncated to fit in target size 16. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/spi_slave.v(40): expression size 32 truncated to fit in target size 1. VERI-1209
+INFO - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_brute_forcer.v(5): compiling module md5_brute_forcer. VERI-1018
+INFO - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(25): compiling module Md5PrintableChunkGenerator. VERI-1018
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(252): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(260): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(268): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(276): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(284): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(292): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(300): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(308): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(316): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(324): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(332): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(340): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(348): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(356): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(364): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(372): expression size 32 truncated to fit in target size 8. VERI-1209
+INFO - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_core.v(24): compiling module Md5Core. VERI-1018
+INFO - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/liquid_crystal_display.v(9): compiling module liquid_crystal_display. VERI-1018
+INFO - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/delay.v(1): compiling module delay(ms=130). VERI-1018
+INFO - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/delay.v(1): compiling module delay(ms=10). VERI-1018
+INFO - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/delay.v(1): compiling module delay(ms=1). VERI-1018
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/liquid_crystal_display.v(120): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/liquid_crystal_display.v(122): expression size 32 truncated to fit in target size 3. VERI-1209
+INFO - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/cross_domain_buffer.v(1): compiling module cross_domain_buffer. VERI-1018
+INFO - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/lcd_line_writer.v(1): compiling module lcd_line_writer. VERI-1018
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/lcd_line_writer.v(43): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/lcd_line_writer.v(45): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/lcd_line_writer.v(13): net charArray[16][7] does not have a driver. VDB-1002
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/fpga-md5.v(65): input port reset is not connected on this instance. VDB-1013
+Loading NGL library '/usr/local/diamond/3.10_x64/ispfpga/sa5p00m/data/sa5mlib.ngl'...
+Loading NGL library '/usr/local/diamond/3.10_x64/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/usr/local/diamond/3.10_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.10_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.10_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p85m.nph' in environment: /usr/local/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.43.
+Top-level module name = fpga_md5.
+WARNING - synthesis: I/O Port btn 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[6] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[5] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[4] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[1] 's net has no driver and is unused.
+######## Missing driver on net led[6]. Patching with GND.
+######## Missing driver on net led[5]. Patching with GND.
+######## Missing driver on net led[4]. Patching with GND.
+######## Missing driver on net led[3]. Patching with GND.
+######## Missing driver on net led[2]. Patching with GND.
+######## Missing driver on net led[1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[16][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[16][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[16][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[16][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[16][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[16][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[16][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[16][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[17][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[17][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[17][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[17][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[17][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[17][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[17][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[17][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[18][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[18][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[18][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[18][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[18][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[18][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[18][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[18][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[19][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[19][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[19][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[19][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[19][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[19][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[19][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[19][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[20][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[20][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[20][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[20][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[20][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[20][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[20][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[20][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[21][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[21][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[21][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[21][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[21][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[21][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[21][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[21][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[22][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[22][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[22][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[22][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[22][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[22][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[22][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[22][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[23][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[23][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[23][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[23][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[23][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[23][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[23][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[23][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[24][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[24][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[24][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[24][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[24][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[24][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[24][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[24][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[25][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[25][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[25][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[25][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[25][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[25][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[25][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[25][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[26][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[26][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[26][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[26][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[26][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[26][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[26][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[26][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[27][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[27][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[27][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[27][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[27][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[27][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[27][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[27][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[28][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[28][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[28][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[28][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[28][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[28][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[28][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[28][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[29][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[29][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[29][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[29][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[29][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[29][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[29][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[29][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[30][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[30][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[30][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[30][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[30][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[30][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[30][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[30][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[31][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[31][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[31][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[31][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[31][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[31][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[31][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[31][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[32][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[32][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[32][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[32][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[32][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[32][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[32][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[32][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[33][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[33][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[33][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[33][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[33][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[33][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[33][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[33][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[34][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[34][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[34][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[34][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[34][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[34][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[34][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[34][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[35][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[35][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[35][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[35][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[35][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[35][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[35][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[35][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[36][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[36][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[36][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[36][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[36][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[36][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[36][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[36][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[37][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[37][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[37][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[37][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[37][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[37][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[37][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[37][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[38][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[38][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[38][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[38][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[38][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[38][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[38][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[38][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[39][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[39][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[39][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[39][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[39][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[39][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[39][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[39][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[40][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[40][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[40][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[40][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[40][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[40][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[40][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[40][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[41][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[41][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[41][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[41][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[41][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[41][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[41][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[41][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[42][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[42][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[42][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[42][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[42][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[42][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[42][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[42][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[43][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[43][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[43][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[43][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[43][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[43][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[43][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[43][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[44][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[44][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[44][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[44][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[44][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[44][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[44][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[44][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[45][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[45][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[45][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[45][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[45][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[45][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[45][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[45][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[46][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[46][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[46][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[46][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[46][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[46][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[46][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[46][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[47][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[47][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[47][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[47][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[47][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[47][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[47][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[47][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[48][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[48][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[48][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[48][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[48][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[48][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[48][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[48][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[49][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[49][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[49][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[49][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[49][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[49][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[49][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[49][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[50][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[50][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[50][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[50][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[50][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[50][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[50][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[50][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[51][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[51][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[51][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[51][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[51][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[51][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[51][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[51][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[52][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[52][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[52][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[52][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[52][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[52][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[52][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[52][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[53][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[53][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[53][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[53][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[53][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[53][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[53][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[53][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[54][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[54][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[54][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[54][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[54][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[54][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[54][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[54][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[55][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[55][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[55][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[55][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[55][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[55][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[55][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[55][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[56][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[56][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[56][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[56][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[56][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[56][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[56][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[56][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[57][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[57][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[57][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[57][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[57][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[57][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[57][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[57][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[58][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[58][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[58][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[58][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[58][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[58][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[58][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[58][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[59][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[59][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[59][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[59][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[59][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[59][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[59][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[59][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[60][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[60][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[60][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[60][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[60][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[60][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[60][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[60][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[61][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[61][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[61][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[61][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[61][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[61][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[61][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[61][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[62][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[62][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[62][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[62][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[62][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[62][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[62][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[62][0]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[63][7]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[63][6]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[63][5]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[63][4]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[63][3]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[63][2]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[63][1]. Patching with GND.
+######## Missing driver on net \lcd_line_writer_inst0/charArray[63][0]. Patching with GND.
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_core.v(440): Register \md5_brute_forcer_inst0/md5/d1_i0 is stuck at Zero. VDB-5013
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_core.v(440): Register \md5_brute_forcer_inst0/md5/c1_i0 is stuck at One. VDB-5014
+WARNING - synthesis: Bit 31 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 31 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 0 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 1 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 4 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 5 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 9 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 11 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 12 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 13 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 15 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 17 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 18 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 20 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 21 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 22 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 25 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 26 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 27 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 28 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 29 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 30 of Register \md5_brute_forcer_inst0/md5/a2 is stuck at One
+WARNING - synthesis: Bit 0 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 1 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 2 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 3 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 5 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 6 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 7 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 8 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 9 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 10 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 13 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 14 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 16 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 17 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 19 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 21 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 23 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 24 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 25 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at One
+WARNING - synthesis: Bit 29 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \md5_brute_forcer_inst0/md5/d2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 1 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 2 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 3 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 5 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 6 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 7 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 8 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 9 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 10 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 13 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 14 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 16 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 17 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 19 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 21 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 23 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 24 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 25 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at One
+WARNING - synthesis: Bit 29 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \md5_brute_forcer_inst0/md5/a3 is stuck at Zero
+
+
+
+WARNING - synthesis: I/O Port btn 's net has no driver and is unused.
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_brute_forcer.v(229): Register \md5_brute_forcer_inst0/controllerState_i3 is stuck at Zero. VDB-5013
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_brute_forcer.v(146): Register \md5_brute_forcer_inst0/hasMatched_76 is stuck at One. VDB-5014
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_printable_chunk_generator.v(379): Register \md5_brute_forcer_inst0/g/paddingOffset_i5 is stuck at Zero. VDB-5013
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/fpga_md5_impl0/source/md5_core.v(439): Register _add_2_3518_e1_i0_i1 is stuck at Zero. VDB-5013
+WARNING - synthesis: /home/patrick/dev/fpga-md5/swedishhat/h
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

@@ -1,0 +1,698 @@
+<HTML>
+<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sun Jan 27 17:55:52 2019
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Design:     fpga_md5
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk4 [get_nets spis_sck_c]
+            477 items scored, 271 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 2.822ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \spi_slave_inst0/bitNumber_2010__i1  (from spis_sck_c +)
+   Destination:    FD1S3IX    D              \spi_slave_inst0/miso_24  (to spis_sck_c -)
+
+   Delay:                   5.442ns  (12.8% logic, 87.2% route), 6 logic levels.
+
+ Constraint Details:
+
+      5.442ns data_path \spi_slave_inst0/bitNumber_2010__i1 to \spi_slave_inst0/miso_24 violates
+      2.500ns delay constraint less
+     -0.120ns L_S requirement (totaling 2.620ns) by 2.822ns
+
+ Path Details: \spi_slave_inst0/bitNumber_2010__i1 to \spi_slave_inst0/miso_24
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.230             CK to Q              \spi_slave_inst0/bitNumber_2010__i1 (from spis_sck_c)
+Route        14   e 1.647                                  bitNumber[1]
+LUT4        ---     0.105              B to Z              i55467_then_3_lut
+Route         1   e 0.020                                  n88101
+MUXL5       ---     0.075           ALUT to Z              i56122
+Route         1   e 1.020                                  n88102
+LUT4        ---     0.105              B to Z              \spi_slave_inst0/i55474_3_lut_3_lut
+Route         1   e 1.020                                  \spi_slave_inst0/n86584
+LUT4        ---     0.105              C to Z              \spi_slave_inst0/i55622_3_lut_3_lut
+Route         1   e 0.020                                  n86586
+MUXL5       ---     0.075           BLUT to Z              mux_28_Mux_0_i31
+Route         1   e 1.020                                  n309
+                  --------
+                    5.442  (12.8% logic, 87.2% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 2.822ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \spi_slave_inst0/bitNumber_2010__i1  (from spis_sck_c +)
+   Destination:    FD1S3IX    D              \spi_slave_inst0/miso_24  (to spis_sck_c -)
+
+   Delay:                   5.442ns  (12.8% logic, 87.2% route), 6 logic levels.
+
+ Constraint Details:
+
+      5.442ns data_path \spi_slave_inst0/bitNumber_2010__i1 to \spi_slave_inst0/miso_24 violates
+      2.500ns delay constraint less
+     -0.120ns L_S requirement (totaling 2.620ns) by 2.822ns
+
+ Path Details: \spi_slave_inst0/bitNumber_2010__i1 to \spi_slave_inst0/miso_24
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.230             CK to Q              \spi_slave_inst0/bitNumber_2010__i1 (from spis_sck_c)
+Route        14   e 1.647                                  bitNumber[1]
+LUT4        ---     0.105              B to Z              i55473_then_3_lut
+Route         1   e 0.020                                  n88107
+MUXL5       ---     0.075           ALUT to Z              i56126
+Route         1   e 1.020                                  n88108
+LUT4        ---     0.105              B to Z              \spi_slave_inst0/i55475_3_lut_3_lut
+Route         1   e 1.020                                  \spi_slave_inst0/n86585
+LUT4        ---     0.105              B to Z              \spi_slave_inst0/i55622_3_lut_3_lut
+Route         1   e 0.020                                  n86586
+MUXL5       ---     0.075           BLUT to Z              mux_28_Mux_0_i31
+Route         1   e 1.020                                  n309
+                  --------
+                    5.442  (12.8% logic, 87.2% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 2.822ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \spi_slave_inst0/bitNumber_2010__i1  (from spis_sck_c +)
+   Destination:    FD1S3IX    D              \spi_slave_inst0/miso_24  (to spis_sck_c -)
+
+   Delay:                   5.442ns  (12.8% logic, 87.2% route), 6 logic levels.
+
+ Constraint Details:
+
+      5.442ns data_path \spi_slave_inst0/bitNumber_2010__i1 to \spi_slave_inst0/miso_24 violates
+      2.500ns delay constraint less
+     -0.120ns L_S requirement (totaling 2.620ns) by 2.822ns
+
+ Path Details: \spi_slave_inst0/bitNumber_2010__i1 to \spi_slave_inst0/miso_24
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.230             CK to Q              \spi_slave_inst0/bitNumber_2010__i1 (from spis_sck_c)
+Route        14   e 1.647                                  bitNumber[1]
+LUT4        ---     0.105              B to Z              i55470_else_3_lut
+Route         1   e 0.020                                  n88103
+MUXL5       ---     0.075           BLUT to Z              i56124
+Route         1   e 1.020                                  n88105
+LUT4        ---     0.105              C to Z              \spi_slave_inst0/i55475_3_lut_3_lut
+Route         1   e 1.020                                  \spi_slave_inst0/n86585
+LUT4        ---     0.105              B to Z              \spi_slave_inst0/i55622_3_lut_3_lut
+Route         1   e 0.020                                  n86586
+MUXL5       ---     0.075           BLUT to Z              mux_28_Mux_0_i31
+Route         1   e 1.020                                  n309
+                  --------
+                    5.442  (12.8% logic, 87.2% route), 6 logic levels.
+
+Warning: 5.322 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk3 [get_nets SYNTHESIZED_WIRE_9]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk2 [get_nets SYNTHESIZED_WIRE_2]
+            570 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 0.322ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \md5_brute_forcer_inst0/controllerState_i2  (from SYNTHESIZED_WIRE_2 +)
+   Destination:    FD1P3AX    SP             \md5_brute_forcer_inst0/dataOut_i0_i0  (to SYNTHESIZED_WIRE_2 +)
+
+   Delay:                   4.732ns  (9.3% logic, 90.7% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.732ns data_path \md5_brute_forcer_inst0/controllerState_i2 to \md5_brute_forcer_inst0/dataOut_i0_i0 meets
+      5.000ns delay constraint less
+     -0.054ns LCE_S requirement (totaling 5.054ns) by 0.322ns
+
+ Path Details: \md5_brute_forcer_inst0/controllerState_i2 to \md5_brute_forcer_inst0/dataOut_i0_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.230             CK to Q              \md5_brute_forcer_inst0/controllerState_i2 (from SYNTHESIZED_WIRE_2)
+Route         9   e 1.559                                  \md5_brute_forcer_inst0/controllerState[2]
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/i2_2_lut
+Route         1   e 1.020                                  \md5_brute_forcer_inst0/n10_adj_24934
+LUT4        ---     0.105              C to Z              \md5_brute_forcer_inst0/i7_4_lut
+Route        32   e 1.713                                  \md5_brute_forcer_inst0/SYNTHESIZED_WIRE_2_enable_53
+                  --------
+                    4.732  (9.3% logic, 90.7% route), 3 logic levels.
+
+
+Passed:  The following path meets requirements by 0.322ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \md5_brute_forcer_inst0/controllerState_i2  (from SYNTHESIZED_WIRE_2 +)
+   Destination:    FD1P3AX    SP             \md5_brute_forcer_inst0/dataOut_i0_i31  (to SYNTHESIZED_WIRE_2 +)
+
+   Delay:                   4.732ns  (9.3% logic, 90.7% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.732ns data_path \md5_brute_forcer_inst0/controllerState_i2 to \md5_brute_forcer_inst0/dataOut_i0_i31 meets
+      5.000ns delay constraint less
+     -0.054ns LCE_S requirement (totaling 5.054ns) by 0.322ns
+
+ Path Details: \md5_brute_forcer_inst0/controllerState_i2 to \md5_brute_forcer_inst0/dataOut_i0_i31
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.230             CK to Q              \md5_brute_forcer_inst0/controllerState_i2 (from SYNTHESIZED_WIRE_2)
+Route         9   e 1.559                                  \md5_brute_forcer_inst0/controllerState[2]
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/i2_2_lut
+Route         1   e 1.020                                  \md5_brute_forcer_inst0/n10_adj_24934
+LUT4        ---     0.105              C to Z              \md5_brute_forcer_inst0/i7_4_lut
+Route        32   e 1.713                                  \md5_brute_forcer_inst0/SYNTHESIZED_WIRE_2_enable_53
+                  --------
+                    4.732  (9.3% logic, 90.7% route), 3 logic levels.
+
+
+Passed:  The following path meets requirements by 0.322ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \md5_brute_forcer_inst0/controllerState_i2  (from SYNTHESIZED_WIRE_2 +)
+   Destination:    FD1P3AX    SP             \md5_brute_forcer_inst0/dataOut_i0_i30  (to SYNTHESIZED_WIRE_2 +)
+
+   Delay:                   4.732ns  (9.3% logic, 90.7% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.732ns data_path \md5_brute_forcer_inst0/controllerState_i2 to \md5_brute_forcer_inst0/dataOut_i0_i30 meets
+      5.000ns delay constraint less
+     -0.054ns LCE_S requirement (totaling 5.054ns) by 0.322ns
+
+ Path Details: \md5_brute_forcer_inst0/controllerState_i2 to \md5_brute_forcer_inst0/dataOut_i0_i30
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.230             CK to Q              \md5_brute_forcer_inst0/controllerState_i2 (from SYNTHESIZED_WIRE_2)
+Route         9   e 1.559                                  \md5_brute_forcer_inst0/controllerState[2]
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/i2_2_lut
+Route         1   e 1.020                                  \md5_brute_forcer_inst0/n10_adj_24934
+LUT4        ---     0.105              C to Z              \md5_brute_forcer_inst0/i7_4_lut
+Route        32   e 1.713                                  \md5_brute_forcer_inst0/SYNTHESIZED_WIRE_2_enable_53
+                  --------
+                    4.732  (9.3% logic, 90.7% route), 3 logic levels.
+
+Report: 4.678 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets clk_50]
+            3932 items scored, 3932 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 21.627ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3DX    CK             \md5_brute_forcer_inst0/g/paddingOffset_i3  (from clk_50 +)
+   Destination:    FD1P3DX    D              \md5_brute_forcer_inst0/g/paddingOffset_i3  (to clk_50 +)
+
+   Delay:                  26.747ns  (7.9% logic, 92.1% route), 19 logic levels.
+
+ Constraint Details:
+
+     26.747ns data_path \md5_brute_forcer_inst0/g/paddingOffset_i3 to \md5_brute_forcer_inst0/g/paddingOffset_i3 violates
+      5.000ns delay constraint less
+     -0.120ns L_S requirement (totaling 5.120ns) by 21.627ns
+
+ Path Details: \md5_brute_forcer_inst0/g/paddingOffset_i3 to \md5_brute_forcer_inst0/g/paddingOffset_i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.230             CK to Q              \md5_brute_forcer_inst0/g/paddingOffset_i3 (from clk_50)
+Route        39   e 1.852                                  \md5_brute_forcer_inst0/g/paddingOffset[3]
+LUT4        ---     0.105              B to Z              \md5_brute_forcer_inst0/g/i48496_2_lut_rep_544
+Route         5   e 1.341                                  \md5_brute_forcer_inst0/g/n87989
+LUT4        ---     0.105              D to Z              \md5_brute_forcer_inst0/g/i1_2_lut_4_lut_adj_146
+Route        14   e 1.547                                  \md5_brute_forcer_inst0/g/n15_adj_22501
+LUT4        ---     0.105              C to Z              \md5_brute_forcer_inst0/g/i1111_4_lut
+Route         2   e 1.158                                  \md5_brute_forcer_inst0/g/n1391
+LUT4        ---     0.105              B to Z              \md5_brute_forcer_inst0/g/i1_3_lut_adj_188
+Route         5   e 1.341                                  \md5_brute_forcer_inst0/g/n66
+LUT4        ---     0.105              C to Z              \md5_brute_forcer_inst0/g/i1124_2_lut_4_lut
+Route         4   e 1.297                                  \md5_brute_forcer_inst0/g/n1404
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1129_rep_51_2_lut_3_lut
+Route         7   e 1.409                                  \md5_brute_forcer_inst0/g/n1409
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1_2_lut_4_lut_adj_149
+Route         2   e 1.158                                  \md5_brute_forcer_inst0/g/n1416
+LUT4        ---     0.105              D to Z              \md5_brute_forcer_inst0/g/i1139_2_lut_4_lut
+Route         4   e 1.297                                  \md5_brute_forcer_inst0/g/n1419
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1141_2_lut
+Route         2   e 1.158                                  \md5_brute_forcer_inst0/g/n1421
+LUT4        ---     0.105              D to Z              \md5_brute_forcer_inst0/g/i1144_2_lut_4_lut
+Route         3   e 1.239                                  \md5_brute_forcer_inst0/g/n1424
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1149_2_lut_3_lut
+Route         5   e 1.341                                  \md5_brute_forcer_inst0/g/n1429
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1156_2_lut_4_lut
+Route         3   e 1.239                                  \md5_brute_forcer_inst0/g/n1436
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1164_3_lut_4_lut
+Route         4   e 1.297                                  \md5_brute_forcer_inst0/g/n1444
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1169_3_lut
+Route         4   e 1.297                                  \md5_brute_forcer_inst0/g/n1449
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1174_3_lut_rep_529
+Route         3   e 1.239                                  \md5_brute_forcer_inst0/g/n87974
+LUT4        ---     0.105              B to Z              \md5_brute_forcer_inst0/g/i1_4_lut_adj_202
+Route         2   e 1.158                                  \md5_brute_forcer_inst0/g/n26_adj_22500
+LUT4        ---     0.105              C to Z              \md5_brute_forcer_inst0/g/i1_2_lut_3_lut_4_lut_adj_100
+Route         3   e 1.239                                  \md5_brute_forcer_inst0/g/n84762
+LUT4        ---     0.105              B to Z              \md5_brute_forcer_inst0/g/i1_4_lut_adj_66
+Route         1   e 1.020                                  \md5_brute_forcer_inst0/g/n84764
+                  --------
+                   26.747  (7.9% logic, 92.1% route), 19 logic levels.
+
+
+Error:  The following path violates requirements by 21.627ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3DX    CK             \md5_brute_forcer_inst0/g/paddingOffset_i3  (from clk_50 +)
+   Destination:    FD1P3DX    D              \md5_brute_forcer_inst0/g/paddingOffset_i3  (to clk_50 +)
+
+   Delay:                  26.747ns  (7.9% logic, 92.1% route), 19 logic levels.
+
+ Constraint Details:
+
+     26.747ns data_path \md5_brute_forcer_inst0/g/paddingOffset_i3 to \md5_brute_forcer_inst0/g/paddingOffset_i3 violates
+      5.000ns delay constraint less
+     -0.120ns L_S requirement (totaling 5.120ns) by 21.627ns
+
+ Path Details: \md5_brute_forcer_inst0/g/paddingOffset_i3 to \md5_brute_forcer_inst0/g/paddingOffset_i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.230             CK to Q              \md5_brute_forcer_inst0/g/paddingOffset_i3 (from clk_50)
+Route        39   e 1.852                                  \md5_brute_forcer_inst0/g/paddingOffset[3]
+LUT4        ---     0.105              B to Z              \md5_brute_forcer_inst0/g/i48496_2_lut_rep_544
+Route         5   e 1.341                                  \md5_brute_forcer_inst0/g/n87989
+LUT4        ---     0.105              D to Z              \md5_brute_forcer_inst0/g/i1_2_lut_4_lut_adj_146
+Route        14   e 1.547                                  \md5_brute_forcer_inst0/g/n15_adj_22501
+LUT4        ---     0.105              C to Z              \md5_brute_forcer_inst0/g/i1111_4_lut
+Route         2   e 1.158                                  \md5_brute_forcer_inst0/g/n1391
+LUT4        ---     0.105              B to Z              \md5_brute_forcer_inst0/g/i1_3_lut_adj_188
+Route         5   e 1.341                                  \md5_brute_forcer_inst0/g/n66
+LUT4        ---     0.105              C to Z              \md5_brute_forcer_inst0/g/i1124_2_lut_4_lut
+Route         4   e 1.297                                  \md5_brute_forcer_inst0/g/n1404
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1129_rep_51_2_lut_3_lut
+Route         7   e 1.409                                  \md5_brute_forcer_inst0/g/n1409
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1_2_lut_4_lut_adj_149
+Route         2   e 1.158                                  \md5_brute_forcer_inst0/g/n1416
+LUT4        ---     0.105              D to Z              \md5_brute_forcer_inst0/g/i1139_2_lut_4_lut
+Route         4   e 1.297                                  \md5_brute_forcer_inst0/g/n1419
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1141_2_lut
+Route         2   e 1.158                                  \md5_brute_forcer_inst0/g/n1421
+LUT4        ---     0.105              D to Z              \md5_brute_forcer_inst0/g/i1144_2_lut_4_lut
+Route         3   e 1.239                                  \md5_brute_forcer_inst0/g/n1424
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1149_2_lut_3_lut
+Route         5   e 1.341                                  \md5_brute_forcer_inst0/g/n1429
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1156_2_lut_4_lut
+Route         3   e 1.239                                  \md5_brute_forcer_inst0/g/n1436
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1164_3_lut_4_lut
+Route         4   e 1.297                                  \md5_brute_forcer_inst0/g/n1444
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1169_3_lut
+Route         4   e 1.297                                  \md5_brute_forcer_inst0/g/n1449
+LUT4        ---     0.105              B to Z              \md5_brute_forcer_inst0/g/i1_4_lut_adj_131
+Route         3   e 1.239                                  \md5_brute_forcer_inst0/g/n47
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1_4_lut_adj_202
+Route         2   e 1.158                                  \md5_brute_forcer_inst0/g/n26_adj_22500
+LUT4        ---     0.105              C to Z              \md5_brute_forcer_inst0/g/i1_2_lut_3_lut_4_lut_adj_100
+Route         3   e 1.239                                  \md5_brute_forcer_inst0/g/n84762
+LUT4        ---     0.105              B to Z              \md5_brute_forcer_inst0/g/i1_4_lut_adj_66
+Route         1   e 1.020                                  \md5_brute_forcer_inst0/g/n84764
+                  --------
+                   26.747  (7.9% logic, 92.1% route), 19 logic levels.
+
+
+Error:  The following path violates requirements by 21.627ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3DX    CK             \md5_brute_forcer_inst0/g/paddingOffset_i3  (from clk_50 +)
+   Destination:    FD1P3DX    D              \md5_brute_forcer_inst0/g/paddingOffset_i2  (to clk_50 +)
+
+   Delay:                  26.747ns  (7.9% logic, 92.1% route), 19 logic levels.
+
+ Constraint Details:
+
+     26.747ns data_path \md5_brute_forcer_inst0/g/paddingOffset_i3 to \md5_brute_forcer_inst0/g/paddingOffset_i2 violates
+      5.000ns delay constraint less
+     -0.120ns L_S requirement (totaling 5.120ns) by 21.627ns
+
+ Path Details: \md5_brute_forcer_inst0/g/paddingOffset_i3 to \md5_brute_forcer_inst0/g/paddingOffset_i2
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.230             CK to Q              \md5_brute_forcer_inst0/g/paddingOffset_i3 (from clk_50)
+Route        39   e 1.852                                  \md5_brute_forcer_inst0/g/paddingOffset[3]
+LUT4        ---     0.105              B to Z              \md5_brute_forcer_inst0/g/i48496_2_lut_rep_544
+Route         5   e 1.341                                  \md5_brute_forcer_inst0/g/n87989
+LUT4        ---     0.105              D to Z              \md5_brute_forcer_inst0/g/i1_2_lut_4_lut_adj_146
+Route        14   e 1.547                                  \md5_brute_forcer_inst0/g/n15_adj_22501
+LUT4        ---     0.105              C to Z              \md5_brute_forcer_inst0/g/i1111_4_lut
+Route         2   e 1.158                                  \md5_brute_forcer_inst0/g/n1391
+LUT4        ---     0.105              B to Z              \md5_brute_forcer_inst0/g/i1_3_lut_adj_188
+Route         5   e 1.341                                  \md5_brute_forcer_inst0/g/n66
+LUT4        ---     0.105              C to Z              \md5_brute_forcer_inst0/g/i1124_2_lut_4_lut
+Route         4   e 1.297                                  \md5_brute_forcer_inst0/g/n1404
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1129_rep_51_2_lut_3_lut
+Route         7   e 1.409                                  \md5_brute_forcer_inst0/g/n1409
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1_2_lut_4_lut_adj_149
+Route         2   e 1.158                                  \md5_brute_forcer_inst0/g/n1416
+LUT4        ---     0.105              D to Z              \md5_brute_forcer_inst0/g/i1139_2_lut_4_lut
+Route         4   e 1.297                                  \md5_brute_forcer_inst0/g/n1419
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1141_2_lut
+Route         2   e 1.158                                  \md5_brute_forcer_inst0/g/n1421
+LUT4        ---     0.105              D to Z              \md5_brute_forcer_inst0/g/i1144_2_lut_4_lut
+Route         3   e 1.239                                  \md5_brute_forcer_inst0/g/n1424
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1149_2_lut_3_lut
+Route         5   e 1.341                                  \md5_brute_forcer_inst0/g/n1429
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1156_2_lut_4_lut
+Route         3   e 1.239                                  \md5_brute_forcer_inst0/g/n1436
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1164_3_lut_4_lut
+Route         4   e 1.297                                  \md5_brute_forcer_inst0/g/n1444
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1169_3_lut
+Route         4   e 1.297                                  \md5_brute_forcer_inst0/g/n1449
+LUT4        ---     0.105              A to Z              \md5_brute_forcer_inst0/g/i1174_3_lut_rep_529
+Route         3   e 1.239                                  \md5_brute_forcer_inst0/g/n87974
+LUT4        ---     0.105              B to Z              \md5_brute_forcer_inst0/g/i1_4_lut_adj_202
+Route         2   e 1.158                                  \md5_brute_forcer_inst0/g/n26_adj_22500
+LUT4        ---     0.105              C to Z              \md5_brute_forcer_inst0/g/i1_2_lut_3_lut_4_lut_adj_100
+Route         3   e 1.239                                  \md5_brute_forcer_inst0/g/n84762
+LUT4        ---     0.105              B to Z              \md5_brute_forcer_inst0/g/i1_4_lut_adj_81
+Route         1   e 1.020                                  \md5_brute_forcer_inst0/g/n84763
+                  --------
+                   26.747  (7.9% logic, 92.1% route), 19 logic levels.
+
+Warning: 26.627 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_12_c]
+            2204 items scored, 2204 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 4.577ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \lcd_line_writer_inst0/state_2012_2013__i1  (from clk_12_c +)
+   Destination:    FD1P3IX    CD             \lcd_line_writer_inst0/char_i0_i7  (to clk_12_c +)
+
+   Delay:                   9.697ns  (9.6% logic, 90.4% route), 8 logic levels.
+
+ Constraint Details:
+
+      9.697ns data_path \lcd_line_writer_inst0/state_2012_2013__i1 to \lcd_line_writer_inst0/char_i0_i7 violates
+      5.000ns delay constraint less
+     -0.120ns L_S requirement (totaling 5.120ns) by 4.577ns
+
+ Path Details: \lcd_line_writer_inst0/state_2012_2013__i1 to \lcd_line_writer_inst0/char_i0_i7
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.230             CK to Q              \lcd_line_writer_inst0/state_2012_2013__i1 (from clk_12_c)
+Route        66   e 1.957                                  \lcd_line_writer_inst0/state[0]
+LUT4        ---     0.105              D to Z              \lcd_line_writer_inst0/state[1]_bdd_4_lut_else_4_lut
+Route         1   e 0.020                                  \lcd_line_writer_inst0/n88066
+MUXL5       ---     0.075           BLUT to Z              \lcd_line_writer_inst0/i56100
+Route         1   e 1.020                                  \lcd_line_writer_inst0/n88068
+LUT4        ---     0.105              A to Z              \lcd_line_writer_inst0/n87229_bdd_4_lut
+Route         1   e 1.020                                  \lcd_line_writer_inst0/n87232
+LUT4        ---     0.105              A to Z              \lcd_line_writer_inst0/i55491_3_lut
+Route         2   e 1.158                                  \lcd_line_writer_inst0/n15_adj_27366
+LUT4        ---     0.105              A to Z              \lcd_line_writer_inst0/i1_4_lut_adj_816
+Route         2   e 1.158                                  \lcd_line_writer_inst0/n86262
+LUT4        ---     0.105              A to Z              \lcd_line_writer_inst0/i48495_4_lut
+Route         1   e 1.020                                  \lcd_line_writer_inst0/n15_adj_27365
+LUT4        ---     0.105              D to Z              \lcd_line_writer_inst0/i45999_2_lut_4_lut
+Route         7   e 1.409                                  \lcd_line_writer_inst0/n70728
+                  --------
+                    9.697  (9.6% logic, 90.4% route), 8 logic levels.
+
+
+Error:  The following path violates requirements by 4.577ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \lcd_line_writer_inst0/state_2012_2013__i1  (from clk_12_c +)
+   Destination:    FD1P3IX    CD             \lcd_line_writer_inst0/char_i0_i7  (to clk_12_c +)
+
+   Delay:                   9.697ns  (9.6% logic, 90.4% route), 8 logic levels.
+
+ Constraint Details:
+
+      9.697ns data_path \lcd_line_writer_inst0/state_2012_2013__i1 to \lcd_line_writer_inst0/char_i0_i7 violates
+      5.000ns delay constraint less
+     -0.120ns L_S requirement (totaling 5.120ns) by 4.577ns
+
+ Path Details: \lcd_line_writer_inst0/state_2012_2013__i1 to \lcd_line_writer_inst0/char_i0_i7
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.230             CK to Q              \lcd_line_writer_inst0/state_2012_2013__i1 (from clk_12_c)
+Route        66   e 1.957                                  \lcd_line_writer_inst0/state[0]
+LUT4        ---     0.105              C to Z              \lcd_line_writer_inst0/i55486_3_lut
+Route         1   e 1.020                                  \lcd_line_writer_inst0/n86596
+LUT4        ---     0.105              A to Z              \lcd_line_writer_inst0/i55488_3_lut
+Route         1   e 0.020                                  \lcd_line_writer_inst0/n86598
+MUXL5       ---     0.075           ALUT to Z              \lcd_line_writer_inst0/i55490
+Route         1   e 1.020                                  \lcd_line_writer_inst0/n86600
+LUT4        ---     0.105              B to Z              \lcd_line_writer_inst0/i55491_3_lut
+Route         2   e 1.158                                  \lcd_line_writer_inst0/n15_adj_27366
+LUT4        ---     0.105              A to Z              \lcd_line_writer_inst0/i1_4_lut_adj_816
+Route         2   e 1.158                                  \lcd_line_writer_inst0/n86262
+LUT4        ---     0.105              A to Z              \lcd_line_writer_inst0/i48495_4_lut
+Route         1   e 1.020                                  \lcd_line_writer_inst0/n15_adj_27365
+LUT4        ---     0.105              D to Z              \lcd_line_writer_inst0/i45999_2_lut_4_lut
+Route         7   e 1.409                                  \lcd_line_writer_inst0/n70728
+                  --------
+                    9.697  (9.6% logic, 90.4% route), 8 logic levels.
+
+
+Error:  The following path violates requirements by 4.577ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \lcd_line_writer_inst0/state_2012_2013__i1  (from clk_12_c +)
+   Destination:    FD1P3IX    CD             \lcd_line_writer_inst0/char_i0_i7  (to clk_12_c +)
+
+   Delay:                   9.697ns  (9.6% logic, 90.4% route), 8 logic levels.
+
+ Constraint Details:
+
+      9.697ns data_path \lcd_line_writer_inst0/state_2012_2013__i1 to \lcd_line_writer_inst0/char_i0_i7 violates
+      5.000ns delay constraint less
+     -0.120ns L_S requirement (totaling 5.120ns) by 4.577ns
+
+ Path Details: \lcd_line_writer_inst0/state_2012_2013__i1 to \lcd_line_writer_inst0/char_i0_i7
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.230             CK to Q              \lcd_line_writer_inst0/state_2012_2013__i1 (from clk_12_c)
+Route        66   e 1.957                                  \lcd_line_writer_inst0/state[0]
+LUT4        ---     0.105              C to Z              \lcd_line_writer_inst0/i55483_3_lut
+Route         1   e 1.020                                  \lcd_line_writer_inst0/n86593
+LUT4        ---     0.105              A to Z              \lcd_line_writer_inst0/i55485_3_lut
+Route         1   e 0.020                                  \lcd_line_writer_inst0/n86595
+MUXL5       ---     0.075           BLUT to Z              \lcd_line_writer_inst0/i55490
+Route         1   e 1.020                                  \lcd_line_writer_inst0/n86600
+LUT4        ---     0.105              B to Z              \lcd_line_writer_inst0/i55491_3_lut
+Route         2   e 1.158                                  \lcd_line_writer_inst0/n15_adj_27366
+LUT4        ---     0.105              A to Z              \lcd_line_writer_inst0/i1_4_lut_adj_816
+Route         2   e 1.158                                  \lcd_line_writer_inst0/n86262
+LUT4        ---     0.105              A to Z              \lcd_line_writer_inst0/i48495_4_lut
+Route         1   e 1.020                                  \lcd_line_writer_inst0/n15_adj_27365
+LUT4        ---     0.105              D to Z              \lcd_line_writer_inst0/i45999_2_lut_4_lut
+Route         7   e 1.409                                  \lcd_line_writer_inst0/n70728
+                  --------
+                    9.697  (9.6% logic, 90.4% route), 8 logic levels.
+
+Warning: 9.577 ns is the maximum delay for this constraint.
+
+
+<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk4 [get_nets spis_sck_c]              |     5.000 ns|    10.644 ns|     6 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk3 [get_nets SYNTHESIZED_WIRE_9]      |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets SYNTHESIZED_WIRE_2]      |     5.000 ns|     4.678 ns|     3  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets clk_50]                  |     5.000 ns|    26.627 ns|    19 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_12_c]                |     5.000 ns|     9.577 ns|     8 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+3 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\md5_brute_forcer_inst0/g/n1416         |       2|    3856|     60.18%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n1419         |       4|    3856|     60.18%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n1421         |       2|    3854|     60.15%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n1424         |       3|    3854|     60.15%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n1409         |       7|    3810|     59.47%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n1429         |       5|    3710|     57.91%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n1404         |       4|    3526|     55.03%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n1436         |       3|    2833|     44.22%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n66           |       5|    2673|     41.72%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n1444         |       4|    2223|     34.70%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n1391         |       2|    1846|     28.81%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n1449         |       4|    1618|     25.25%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n26_adj_22500 |       2|    1472|     22.97%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n47           |       3|    1374|     21.45%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n85012        |       4|    1336|     20.85%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n84762        |       3|    1182|     18.45%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n84763        |       1|     933|     14.56%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n84765        |       1|     865|     13.50%
+                                        |        |        |
+\lcd_line_writer_inst0/n15_adj_27365    |       1|     833|     13.00%
+                                        |        |        |
+\lcd_line_writer_inst0/n70728           |       7|     833|     13.00%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/paddingOffset_|        |        |
+7__N_17485[0]                           |       1|     788|     12.30%
+                                        |        |        |
+\liquid_crystal_display_inst0/wakeupDela|        |        |
+y/done_N_22372                          |       2|     736|     11.49%
+                                        |        |        |
+\liquid_crystal_display_inst0/wakeupDela|        |        |
+y/n1381                                 |      32|     736|     11.49%
+                                        |        |        |
+\md5_brute_forcer_inst0/g/n84764        |       1|     735|     11.47%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
+---------------
+
+Timing errors: 6407  Score: 72860813
+
+Constraints cover  31999642 paths, 36245 nets, and 80887 connections (98.6% coverage)
+
+
+Peak memory: 632545280 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

@@ -18,31 +18,36 @@
 *****************************
 */
 
-`include "spi_slave_buffer.v"
-
 // Force error when implicit net has no type.
 `default_nettype none
 
+`include "pll.v"
+`include "top_md5.v"
+`include "md5core.v"
+`include "string_process_match.v"
+`include "cmd_parser.v"
+`include "parallel_bus.v"
+`include "hash_op.v"
 
 module ecp5_trellis_md5 #
 (
-    parameter integer NUM_LEDS = 8
+    parameter integer NUM_LEDS = 4
 )
 (
-    //input wire clk_12mhz,
+    input wire clk_12mhz,
     input wire reset_n,
 
-    // rpi spi interface
-    input wire spis_sck,
-    inout wire spis_mosi,
-    input wire spis_miso,
-    input wire spis_ss,
+    // rpi parallel bus 
+    input wire bus_clk,
+    inout wire [15:0] bus_data,
+    input wire bus_rnw,
 
-    //output wire bus_done,
-    //output wire bus_match,
-    //output wire led0,
-    //output wire led0_r,         // indicates reset pressed
-    output wire [NUM_LEDS-1:0] led_n
+    output wire bus_done,
+    output wire bus_match,
+    output wire led0_g,
+    output wire led0_r,         // indicates reset pressed
+    output wire led0_b,        // not locked
+    output wire [NUM_LEDS-1:0] led
 );
 
 /*
@@ -52,46 +57,33 @@ module ecp5_trellis_md5 #
 */
 
 wire reset;
-wire [NUM_LEDS-1:0] led;
 
 assign reset = ~reset_n;
-assign led = ~led_n;
 
+//wire clk_150mhz;
+wire locked;
+
+assign led0_b = ~locked;
 /*
 *****************************
 * Instantiations
 *****************************
 */
 /*
-cross_domain_buffer #
+pll pll_inst
 (
-    .DATA_WIDTH(NUM_LEDS)
-)
-cross_domain_buffer_inst0
-(
-    .clk(clk_100mhz),
-    .data_in(spis_mosi),
-    .save_cmd(spis_done),	
-    .data_out(!!!leds),
-    .save_complete(save_complete)
+    .clki(clk_12mhz),
+    .locked(locked),
+    .clko(clk_150mhz)
 );
 */
-spi_slave_buffer spi_slave_buffer_inst0(
-    .reset(reset),
-    .clk(spis_sck),
-    .mosi(spis_mosi),
-    .miso(spis_miso),
-    .sel(spis_ss),
-    .buffer(led)
-);
 
-/*
 top_md5 #
 (
     .NUM_LEDS(NUM_LEDS)
 ) top_md5_inst
 (
-    .clk(clk_100mhz),
+    .clk(clk_12mhz),
     .reset(reset),
     .bus_clk(bus_clk),
     .bus_data(bus_data),
@@ -102,7 +94,6 @@ top_md5 #
     .match_led(led0_g),
     .led(led)
 );
-*/
 
 endmodule
 

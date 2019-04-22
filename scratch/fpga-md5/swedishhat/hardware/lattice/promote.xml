@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userSetting name="/home/patrick/dev/fpga-md5/swedishhat/hardware/lattice/promote.xml" version="Diamond (64-bit) 3.10.3.144.3" date="Sat Feb  2 21:01:00 2019" vendor="Lattice Semiconductor Corporation" >
+  <msg mid="35931002" type="Warning" />
+  <msg mid="35901245" type="Error" />
+  <msg mid="35901209" type="Warning" />
+  <msg mid="35901328" type="Info" />
+</userSetting>
